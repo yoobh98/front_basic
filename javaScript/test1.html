@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	var num=3;
+	function next(){
+		num++;
+		if(num==7){
+			num=3;
+		}
+		let img=document.getElementById('img')
+		img.src='메이플/듄켈'+num+'.gif'
+	}
+	
+	function before(){
+		if(num==3){
+			num=7;
+		}
+		num--;
+		let img=document.getElementById('img')
+		img.src='메이플/듄켈'+num+'.gif'
+	}
+	
+</script>
+<style type="text/css">
+	img{
+		width:1000px;height:800px;
+	}
+
+</style>
+</head>
+<body>
+
+<div class="wrap">
+<table border="1" align="center">
+	<tr>
+		<th>
+			<img id="img" src="메이플/듄켈3.gif">
+		</th>
+	</tr>
+	<tr style="background-color:powderblue">
+		<th>
+			<input type="button" value="이전" onclick="before()">
+			<input type="button" value="다음" onclick="next()">
+		</th>
+	</tr>
+</table>
+</div>
+
+</body>
+</html>

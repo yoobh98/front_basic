@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script src="jquery-3.6.0.min.js"></script>
+
+<script type="text/javascript">
+	$(function(){
+		
+		$("button.b1").click(function(){
+			$("img").css({width:'100px'})
+		})
+		
+			$("button.b2").click(function(){
+			$("img").animate({width:'200px'})
+		})
+		
+			$("button.b3").click(function(){
+			$("img").animate({width:'500px'})
+		})
+		
+	})
+</script>
+
+<style type="text/css">
+	.css_pic{
+		height:430px; text-align:center;
+	}
+	.css_pic img{width:250px;}
+</style>
+
+</head>
+<body>
+	<div class="css_pic">
+		<button class="b1">+100</button>
+		<button class="b2">+200</button>
+		<button class="b3">+500</button>
+		<hr>
+		<img src="이미지/아이유0.jpg">
+	</div>
+
+
+
+</body>
+</html>
+
+

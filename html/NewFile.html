@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	.mainWrap{
+		width:100%;
+		position: relative;
+		text-align: center;
+	}
+	.mainWrap::before{
+		content:"";
+		background-image: url(https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMTA5MDVfOTcg%2FMDAxNjMwODIzMjE3NTU5.IRbIZ_XNgbKRbcELETwiiWVfT5XT1Iw8ztBFZQ-AARYg.Pnpry4TUAAaJWGQvvRhgFb4kDCeFP855H8fFx6ggzVwg.JPEG.yunseoyun-0429%2FScreenshot_20210904-214819_Gallery.jpg&type=ofullfill340_600_png);
+		background-size: cover;
+		opacity: 0.8;
+		position: absolute;
+		top:0px;left:0px;right:0px;bottom:0px;
+	}
+	
+	.mainDiv{
+		position: relative;
+	}
+	.navUrl{
+		z-index:10;
+		position: fixed;
+		top:360px;
+		left:30px;
+		font-size: 25pt;
+	}
+	.navUrl a{
+		color:black;
+	}
+	div{
+		padding-bottom:200px;
+	}
+	.index a{
+		color:black;
+		font-size: 20pt;
+	}
+	img{
+		width:400px;
+	}
+	
+</style>
+</head>
+<body>
+<div class="mainWrap">
+	<nav class="navUrl">
+		<h1>네비게이션</h1>
+		<a href="#homeNav">[맨위로]</a><br><br>
+		<a href="#indexNav">[주소들 보러가기]</a><br><br>
+		<a href="#imageNav1">[설인아 보러가기]</a><br><br>
+		<a href="#imageNav2">[아이유 보러가기]</a><br><br>
+	</nav>
+	<div class="mainDiv">
+		<div>
+			<div>
+				<a id="homeNav">
+				<h1>최상위 영역입니다</h1>
+				</a>
+				<h1>최상위</h1>
+				<h1>최상위</h1>
+				<h1>최상위</h1>
+				<h1>최상위</h1>
+				<h1>최상위</h1>
+				<hr>
+			</div>
+		
+			<div class="index">
+				<a id="indexNav">
+				<h1>유용한 주소들</h1>
+				</a><br>
+				<a href="https://www.naver.com/" title="네이버로 바로가기">네이버</a><br>
+				<a href="https://www.daum.net/" title="다음으로 바로가기">다음 바로가기</a><br>
+				<a href="https://www.google.co.kr/" title="구글로 바로가기">구글 바로가기</a><br>
+				<a href="https://maplestory.nexon.com/Promotion/event/2022/20220630/intro/2nd" 
+				title="메이플로 바로가기">메이플 바로가기</a><br>
+				<hr>
+			</div>
+		
+			<div>
+				<a id="imageNav1">
+				<h1>설인아 관련 정보</h1>
+				</a><br>
+				<a href="https://blog.naver.com/herum92/222728995476" title="블로그 보러가기">
+				<img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjA1MTFfMTcx%2FMDAxNjUyMjY3OTUxMjc3.hTiB_QNyn3h66nYTofOrfMd-EALIptRRe0HBNItxcXUg.yqfxzIpmn3gcGWoVd1n1JTLhOoxle8nIIGxRhflDsWgg.JPEG.herum92%2F%25B4%25D9%25BF%25EE%25B7%25CE%25B5%25E5_%252816%2529.jpg&type=a340"></a>
+				<br><a href="https://blog.naver.com/subbi0427/222678023755" title="블로그 보러가기">
+				<img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjAzMjBfMjk4%2FMDAxNjQ3NzQzMTM5NDkz.5WJdmMGfbEFpzvGygHS1EJ_B8PiM3pG53ctU3Uw-9gcg.1RNry7O3isUxbHvz1IGA3NtsOej6HSG0q6Uzz8PDgHIg.JPEG.subbi0427%2FIMG_5751.JPG&type=a340"></a>
+				<br><a href="https://blog.naver.com/brenden-blog/222671701997" title="블로그 보러가기">
+				<img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjAzMTNfMjYg%2FMDAxNjQ3MTc4MTI2MDU5._7skBgn4CmN4geroD4nDww9nT2-_BbEuSif1PikjdMQg.B74k3zoMB0L06lYCJbiqgmLdYxfT1Br9VStzJ34gdzAg.PNG.brenden-blog%2Fimage.png&type=a340"></a>
+				<hr>
+			</div>
+			<div>
+				<a id="imageNav2">
+				<h1>아이유 관련 정보</h1>
+				</a><br>
+				<a href="https://blog.naver.com/bullion08124/222816153080" title="블로그 보러가기">
+				<img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjA3MTdfMjIw%2FMDAxNjU4MDYyOTY1MjQ3.9BUGia9iz7SmyMmztajtrKsADEfMNiH9UKwqH9gqHZAg.8zuuA7ymu1CRKuoeDeX8HXyrmvKJ7EJIQLhWb-ZqJysg.JPEG.bullion08124%2Fb5fed50ba175b5f20e2f1108baf06507.jpg&type=sc960_832"></a>
+				<br><a href="https://blog.naver.com/sjjs0129/222838565523" title="블로그 보러가기">
+				<img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjA4MDNfMTA0%2FMDAxNjU5NDk3Mjc0MTM1.P4zYPjE_RxNveW9fFrts2yqsetGe6WUvXSziviUCyn8g.J3NTFbvwuBHmY6okGLFde6WJowKHORRWCRRi33FlG-8g.JPEG.sjjs0129%2Foutput_4154397854.jpg&type=sc960_832"></a>
+				<br><a href="https://blog.naver.com/dltpdud03/222546122645" title="블로그 보러가기">
+				<img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMTEwMjNfMjA5%2FMDAxNjM0OTkzNDQyMDE2.d6DtGfvktL4zaaij8iy_N8hS2QdZC5ge4tZuiPVZaL8g.z_aETVzxC9-9ycdGkwjVmquBGzQVCbA0PWQNJRSyue4g.JPEG.dltpdud03%2FPicsArt%25A3%25DF10%25A3%25AD22%25A3%25AD06.59.22.jpg&type=sc960_832"></a>
+				<hr>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>
+

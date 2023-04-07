@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="jquery-3.6.0.min.js"></script>
+<script src="jquery-1.12.1-ui.js"></script>
+
+<script type="text/javascript">
+	var si=15;
+	
+	$(function(){
+		$("#drg").draggable();
+	})
+	
+	function min(){
+		si-=5;
+		document.getElementById("main").style.fontSize=si+"px"
+		document.getElementById("num").innerHTML=si
+	}
+	
+	function max(){
+		si+=5;
+		document.getElementById("main").style.fontSize=si+"px"
+		document.getElementById("num").innerHTML=si
+	}
+
+</script>
+
+<style type="text/css">
+	body{
+		margin:0;
+	}
+	
+	img{ width:50px; height:50px;}
+	
+	#drg{
+		border:2px solid black;
+		text-align:center;
+		width:300px;
+		height:250px;
+		margin:0 ;
+		position: fixed;
+		font-size:30px;
+		
+	}
+	#num{
+		background-color:yellow;
+		padding-right:20px;
+		padding-left:20px;
+	}
+	.drg_h3{
+		text-align:center;
+		background-color:powderblue;
+		margin:0;
+	}
+	.drg_div{
+		margin:0;
+		padding-top:30px;
+	}
+
+</style>
+
+</head>
+<body>
+
+
+<div id="main">
+	<h1>오늘의 소설</h1>
+	<p>오늘도 덥다</p>
+	<p>내일도 덥다</p>
+	<p>모래는 바다</p>
+</div>
+
+<div id="drg">
+	<h3 class="drg_h3">리모콘 <hr style="margin:0px"> <h3>
+	
+	<div class="drg_div">
+		<img onclick="min()" src="이미지/왼쪽.png">
+		<sapn id="num">15</sapn>
+		<img onclick="max()" src="이미지/오른쪽.png">
+	</div>
+</div>
+
+</body>
+</html>
+
+
+

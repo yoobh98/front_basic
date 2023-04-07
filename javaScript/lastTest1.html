@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<style type="text/css">
+
+	@keyframes blink-effect {
+	  50% {
+	    opacity: 0;
+	  }
+	}
+	
+	#bottom.a4{
+	  animation: blink-effect 0.3s step-end infinite;
+	  background-color:red;
+	}
+
+	#main{width:1000px; margin:auto; text-align:center;}
+	
+	#bottom.a1{
+		background-color:yellow;
+	}
+	#bottom.a2{
+		background-color:green;
+	}
+	#bottom.a3{
+		background-color:pink;
+	}
+
+	#bottom.a5{
+		display:none;
+	}
+</style>
+
+<script type="text/javascript">
+	function init(){
+		var c1=document.getElementById('b1')
+		var c2=document.getElementById('b2')
+		var c3=document.getElementById('b3')
+		var c4=document.getElementById('auto')
+		var c5=document.getElementById('del')
+		
+		c1.addEventListener("click",b_func)
+		c2.addEventListener("click",b_func)
+		c3.addEventListener("click",b_func)
+		c4.addEventListener("click",b_func)
+		c5.addEventListener("click",b_func)
+	}
+	
+	function b_func(){
+		let bottom=document.getElementById('bottom')
+		switch(event.target.id){
+			case "b1":
+				bottom.setAttribute("class","a1")
+				break;
+			case "b2":
+				bottom.setAttribute("class","a2")
+				break;
+			case "b3":
+				bottom.setAttribute("class","a3")
+				break;
+			case "auto":
+				bottom.setAttribute("class","a4")
+				break;
+			case "del":
+				bottom.setAttribute("class","a5")
+				break;
+		}
+	}
+
+</script>
+
+</head>
+<body onload="init()">
+
+
+<div id="main">
+	<input type="button" id="b1" value="버튼1">
+	<input type="button" id="b2" value="버튼2">
+	<input type="button" id="b3" value="버튼3">
+	<input type="button" id="auto" value="자동">
+	<input type="button" id="del" value="삭제">
+</div>
+<div id="bottom" style="width:300px;height:300px;
+	margin:auto; padding-top:50px; "align="center">
+	버튼 클릭
+</div>
+
+
+</body>
+</html>

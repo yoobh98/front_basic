@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	.wrap{
+		width:90%;height:200px;
+		border: 4px solid black;
+		margin: 0 auto;
+		text-align: center;
+		display:flex; flex-flow: column;
+		/* flex-flow: column||row 세로냐 가로냐 */
+	}
+	.wrap div{
+		width:33.3333%;
+	}
+	.div1{order:3; background-color: red;}
+	.div2{order:2; background-color: green;
+			display:flex;flex-flow:column;
+	}
+	.div3{order:1; background-color: blue;}
+	
+	
+	
+	
+</style>
+
+
+
+</head>
+<body>
+
+<div class="wrap">
+
+	<div class=div1><h1>1</h1></div>
+	<div class=div2>
+		<h1 class="h1">1</h1>
+		<h1 class="h2">2</h1>
+		<h1 class="h3">3</h1>
+	</div>
+	<div class=div3><h1>3</h1></div>
+	
+</div>
+
+
+
+
+</body>
+</html>

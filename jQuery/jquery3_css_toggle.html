@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<style type="text/css">
+	.important{
+		font-weight: bold; font-size:xx-large;
+	}
+	.blue{color:blue;}
+	.red{color:red;}
+	
+</style>
+
+<script src="jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$("button.add").click(function(){
+			$("h1,h2,p").addClass("blue")
+			$("div").addClass("important")
+		})
+		
+		$("button.remove").click(function(){
+			$("h1,h2,p").removeClass("blue")
+			$("div").removeClass("important")
+		})
+		
+		$("button.tog").click(function(){
+			$("#01,#02,#03,#04").toggleClass("red")
+		})
+		
+	})
+</script>
+
+</head>
+<body>
+
+	<h1>HTML</h1> <h2>CSS</h2> <p>JAVASCRIPT</p>
+	<div>JQUERY</div>
+	<button class="add">css 적용</button>
+	<button class="remove">css 적용 해제</button>
+	
+	<!--얘는 한번더 누르면 자동으로 없어짐  -->
+	<button class="tog">toggle btn</button>
+
+	<h1 id="01">HTML</h1> <h2 id="02">CSS</h2> 
+	<p id="03">JAVASCRIPT</p>
+	<div id="04">JQUERY</div>
+
+</body>
+</html>
+
+
+
+
+

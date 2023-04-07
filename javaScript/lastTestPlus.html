@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+	function init(){
+		
+		let thumbImg = document.getElementsByClassName("default_img");
+											/* id말고 클래스네임을 갖고온다 */
+		for(i=0;i<thumbImg.length;i++){
+			thumbImg[i].addEventListener('click',img_listener);
+										/*클릭이 일어나면 img_listener라는 함수를 호출  */
+		}
+	}
+	function img_listener(event){
+		console.log("이미지 실행 : "+event.target.id)
+		document.getElementById("target").src = "이미지/아이유"+event.target.id + ".jpg";
+		
+		let basic = document.querySelector("#basic")
+		basic.setAttribute('class','dark')
+		
+		let remove= document.querySelector("#remove")
+		remove.setAttribute('class','a')
+	}
+	function imgClose(){
+		 let remove=document.querySelector("#remove");
+		 remove.removeAttribute("class");
+		 
+		 let basic=document.querySelector("#basic")
+		 basic.removeAttribute("class");
+	}
+</script>
+
+<style type="text/css">
+	.default_img{width:150px; height:100px;}
+	#basics{ height:800px; }
+	#basic.dark{background:black;opacity:0.2;}
+	#remove{display:none;}
+	#remove.a{display:block; width:1200px; height:800px;
+		background:#515151; opacity:0.8; border:10px solid #754C00;
+		position : absolute; right:20px; top:100px;
+	}
+	#target { width:1100px;height:650px; margin:10px 10px 10px 25px;}
+	#div_x{ position:absolute; top:0; right:0; text-align:center; 
+			width:30px; height:30px; color:white;  }
+	#div_x:hover { background:darkgray; }
+	#name{ text-align:center; text-shadow: aqua;}
+</style>
+
+</head>
+<body onload="init()">
+
+<div id="basic">
+	<header>
+		<h1>light box</h1>
+		<img class="default_img" id="6" alt="" src="이미지/아이유6.jpg">
+		<img class="default_img" id="7" alt="" src="이미지/아이유7.jpg">
+		<img class="default_img" id="9" alt="" src="이미지/아이유9.jpg">
+	</header>
+</div>
+
+<div id="remove">
+	<div align="right" style="font-size:15pt;">
+		<div id="name"><h3 style="color:#BDAE24;">2 0 1 9&nbsp;Super_IU</h3></div>
+		<div id="div_x" onclick="imgClose()">x</div>
+		<hr>
+	</div>
+	<img id="target">
+</div>
+
+</body>
+</html>
+
+
+
+
+

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	#img{
+		width:100px; height:100px;
+	}
+	img.abc:hover{width:110px; height:110px;}
+</style>
+
+<script type="text/javascript">
+	var img;
+	function init(){
+		let arr=['아이유0.jpg','아이유1.jpg','아이유2.jpg'
+			,'아이유3.jpg','아이유4.jpg']
+
+		for(i=0;i<arr.length;i++){
+			img = document.createElement("img")
+			
+			img.src = "이미지/"+arr[i]
+			//img.src =arr[i]
+			img.id="img"
+			/* img.setAttribute("src","이미지/"+arr[i])
+			img.setAttribute("id","img") */
+			document.getElementById('id').appendChild(img)
+		}
+		
+		let insert= document.getElementById("insert")
+		let selArr=["야구1","야구2","야구3"]
+		for(i=0; i<selArr.length;i++){
+			var opt = document.createElement("option")
+			//opt.value=selArr[i]
+			opt.innerHTML = selArr[i]
+			insert.appendChild(opt)
+		}
+		
+		
+		
+		
+	}
+	
+	function add(){
+		//배열 생성 후 이미지 이름 5개저장후 표현
+
+		img = document.createElement("img")
+					/*~라는 태그를 생성해라  */
+		/* img.src="이미지/아이유0.jpg"
+		img.id="img"
+		img.className="abc" */
+		img.setAttribute("src","이미지/아이유0.jpg")
+		img.setAttribute("id","img") 
+		img.setAttribute("onClick","test(this)")
+		
+		/* img.width = 100
+		img.style.height = "100px" */
+		//document.body.appendChild(img)
+		document.getElementById('test').appendChild(img)
+	}
+	function test(obj){
+		//obj.style.display="none"
+		document.getElementById('test').removeChild(obj)
+	}
+	
+	function rm(){
+		//document.body.removeChild(img)
+		//document.body.innerHTML = ""
+		/*  body 안쪽에 있는 모든 내용을 삭제 */
+		document.getElementById('id').innerHTML=""
+		/* id값으로 줘서 삭제  */
+	}
+	
+	function test2(){
+		window.close()
+	}
+</script>
+</head>
+
+<body onload="init()">
+
+	<select id="insert"></select>
+	
+	<div id="id">
+		
+	</div>
+
+	<p id="test">test</p>
+	<a href="#" onclick="add()">이미지추가</a>
+	<a href="#" onclick="rm()">이미지삭제</a>
+
+<input type="checkbox" onclick="test2()">하루동안 열지않기</button>
+
+</body>
+</html>
+
+
+
+

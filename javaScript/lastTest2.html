@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+
+	.boxRImg{
+		width:600px;height:300px;
+	}
+	#box img{
+		width:100px;height:100px;
+	}
+	.boxR{
+		border:5px solid orange;
+		position:absolute;right:30px;bottom:10px;
+		align:right;
+		background-color: black;
+		width:1300px;height:800px;
+		color:yellow;
+
+	}
+	.boxRImg{
+		margin:auto;
+		align:center;
+		width:1000px;height:600px;
+	}
+	.rigthDiv{
+		align:right;
+	}
+	.h1{
+		text-align: center;
+	}
+	
+	.buttonC{
+		position:absolute;
+		right:20px;top:10px;
+	}
+	.buttonOff, .h1Off{
+		display:none;
+	}
+	.box{
+		width:300px;height:300px;
+	}
+	.imgBack{
+		width:150px;height:100px;
+	}
+
+
+</style>
+
+<script type="text/javascript">
+	var button=document.getElementById('button')
+
+	var h1=document.getElementById('h1')
+	var boxdiv=document.getElementById('boxDiv')
+	
+	function on1(){
+		document.querySelector('body').style.backgroundColor="gray"
+		document.querySelector('body').style.opacity="0.4";
+		add1()
+	}
+	function on2(){
+		document.querySelector('body').style.backgroundColor="gray"
+		document.querySelector('body').style.opacity="0.4";
+		add2()
+	}
+	function on3(){
+		document.querySelector('body').style.backgroundColor="gray"
+		document.querySelector('body').style.opacity="0.4";
+		add3()
+	}
+	
+	function add1(){
+		boxdiv=document.getElementById('boxDiv')
+		h1=document.createElement('h1')
+		img=document.getElementById('img1')
+		button=document.createElement('button')
+		button.innerHTML="X"
+		button.setAttribute("class","buttonC")
+		button.addEventListener("click",btn_func1)
+		boxdiv.appendChild(button)
+		
+		h1.innerHTML="2 0 1 9 IU  <br> <hr> "
+	
+		h1.setAttribute("class","h1")
+		img.setAttribute("class","boxRImg")
+		boxdiv.setAttribute("class","boxR")
+		boxdiv.appendChild(h1)
+		boxdiv.appendChild(img)
+	}
+	
+	function btn_func1(){
+		box=document.getElementById('box')
+
+		document.createElement('img')
+		img=document.getElementById('img1')
+		img.setAttribute("class","imgBack")
+		box.appendChild(img)
+		box.setAttribute("class","box")
+		boxdiv.removeAttribute("class")
+		
+		h1.setAttribute("class","h1Off")
+		button.setAttribute("class","buttonOff")
+		off()
+		
+	}
+	function add2(){
+		boxdiv=document.getElementById('boxDiv')
+		h1=document.createElement('h1')
+		img=document.getElementById('img2')
+		button=document.createElement('button')
+		button.innerHTML="X"
+		button.setAttribute("class","buttonC")
+		button.addEventListener("click",btn_func2)
+		boxdiv.appendChild(button)
+		
+		h1.innerHTML="2 0 1 9 IU  <br> <hr> "
+	
+		h1.setAttribute("class","h1")
+		img.setAttribute("class","boxRImg")
+		boxdiv.setAttribute("class","boxR")
+		boxdiv.appendChild(h1)
+		boxdiv.appendChild(img)
+	}
+	
+	function btn_func2(){
+		box=document.getElementById('box')
+
+		document.createElement('img')
+		img=document.getElementById('img2')
+		img.setAttribute("class","imgBack")
+		box.appendChild(img)
+		box.setAttribute("class","box")
+		boxdiv.removeAttribute("class")
+		
+		h1.setAttribute("class","h1Off")
+		button.setAttribute("class","buttonOff")
+		off()
+		
+	}
+	
+	function add3(){
+		boxdiv=document.getElementById('boxDiv')
+		h1=document.createElement('h1')
+		img=document.getElementById('img3')
+		button=document.createElement('button')
+		button.innerHTML="X"
+		button.setAttribute("class","buttonC")
+		button.addEventListener("click",btn_func3)
+		boxdiv.appendChild(button)
+		
+		h1.innerHTML="2 0 1 9 IU  <br> <hr> "
+	
+		h1.setAttribute("class","h1")
+		img.setAttribute("class","boxRImg")
+		boxdiv.setAttribute("class","boxR")
+		boxdiv.appendChild(h1)
+		boxdiv.appendChild(img)
+	}
+	
+	function btn_func3(){
+		box=document.getElementById('box')
+
+		document.createElement('img')
+		img=document.getElementById('img3')
+		img.setAttribute("class","imgBack")
+		box.appendChild(img)
+		box.setAttribute("class","box")
+		boxdiv.removeAttribute("class")
+		
+		h1.setAttribute("class","h1Off")
+		button.setAttribute("class","buttonOff")
+		off()
+		
+	}
+	
+	
+	function off(){
+		document.querySelector('body').style.backgroundColor="white"
+		document.querySelector('body').style.opacity="1";
+	}
+	
+			
+</script>
+</head>
+<body>
+
+<h1>light box</h1>
+<div id="box">
+	<div>
+	<img id="img1" src="이미지/아이유1.jpg"
+		onclick="on1()">
+	<img id="img2" src="이미지/아이유2.jpg"
+		onclick="on2()">
+	<img id="img3" src="이미지/아이유4.jpg"
+		onclick="on3()">
+	</div>
+	
+</div>
+<div id="boxDiv" align="center">
+	</div>
+
+
+
+
+</body>
+</html>

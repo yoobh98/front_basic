@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<style type="text/css">
+	#tagAdd{
+		width:50%; border: 1px solid #999;
+	}
+	.accountCell{
+		width:40%; text-align:center;
+	}
+	.balanceCell{
+		text-align:center;
+	}
+	/* tr의 짝수번째를 의미 */
+	tr:nth-child(even){
+		background-color:beige;
+	}
+</style>
+
+<script type="text/javascript">
+	function tagAddFunc(){
+		let arrName=['유병현','아이유','전상근','안지영']
+		let arrAddr=['지구','화성','수성','목성']
+		let table=document.getElementById('tagAdd')
+		
+		for(let i=0;i<arrName.length;i++){
+			tr=document.createElement('tr')
+			td1=document.createElement('td')
+			td1.innerHTML=arrName[i]
+			td1.className = "accountCell"
+			tr.appendChild(td1)
+			
+			td2=document.createElement('td')
+			td2.innerHTML=arrAddr[i]
+			td2.className = "balanceCell"
+			tr.appendChild(td2)
+			
+			table.appendChild(tr)
+		}
+	}
+</script>
+
+</head>
+<body onload="tagAddFunc()">
+	<table id="tagAdd">
+		<tr>
+			<th>이 름</th> <th>주 소</th>
+		</tr>
+	</table>
+
+
+</body>
+</html>

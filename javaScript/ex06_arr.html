@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<script type="text/javascript">
+	var city = ['서울','부산','인천']
+	city[3]='다른값'
+	
+	function printArr(){
+		for(i=0;i<city.length;i++){
+			document.write(city[i]+", ")
+		}
+	}
+	printArr()
+	
+	var joinData = city.join('/')
+	/*중간 중간에 특정한 값을 추가해주는 기능.(구분 할 때 사용)  */
+	document.write(joinData+"<hr>")
+	
+	
+	var arr=[111,222,333]
+	var concatArr = arr.concat(city)
+	/*arr의 값과 city의 값을 합쳐주는 기능.  */
+	document.write(concatArr+"<hr>")
+	
+	arr.push('안녕하세요')
+	/*끝에다가 값을 추가  */
+	document.write(arr+"<hr>")
+	
+	arr.pop()
+	/*마지막 값을 제거(빼온다) */
+	document.write(arr+"<hr>")
+	
+	arr.unshift("안녕","하세요")
+	/*제일 앞쪽에 값 추가  */
+	document.write(arr+"<hr>")
+	
+	arr.shift()
+	/*제일 앞 값을 제거(빼온다)  */
+	document.write(arr+"<hr>")
+	
+	
+	
+</script>
+
+
+</body>
+</html>
+
+
+
+
+
+
+

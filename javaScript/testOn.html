@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	div{width:500px; margin:auto;}
+</style>
+
+<script type="text/javascript">
+	function mDown(obj){
+		document.getElementById('iu').style.opacity="0.1";
+		/* document.getElementById("iu").src=
+			"이미지/아이유7.jpg" */
+	}
+	
+	function mUp(obj){
+	/* 	document.getElementById("iu").src=
+			"이미지/아이유3.jpg" */
+		document.getElementById('iu').style.opacity="1";	
+	}
+</script>
+</head>
+<body>
+
+<div>
+	<img src="이미지/아이유7.jpg" id="iu"
+	onmousedown="mDown(this)" onmouseup="mUp(this)" >
+</div>
+
+</body>
+</html>

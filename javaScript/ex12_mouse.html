@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+	function mDown(obj){
+		obj.style.backgroundColor="red";
+	/* 여기서 background-color쓰려면 대문자로 바꾸는 규칙을 */
+		obj.style.fontSize="20pt"
+		obj.innerHTML="놔주세요"
+	}
+	
+	function mUp(obj){
+		obj.style.backgroundColor="aqua";
+		obj.style.fontSize="12pt"
+		obj.innerHTML="믿구 있었다구~"
+	}
+</script>
+
+</head>
+<body>
+
+<div onmousedown="mDown(this)" onmouseup="mUp(this)"
+	style="background-color:aqua; width:90px; height:20px;
+	padding:40px;">클릭
+</div>
+
+
+
+</body>
+</html>

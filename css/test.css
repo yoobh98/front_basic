@@ -1,0 +1,63 @@
+
+*{margin:0;}
+
+.wrap{ 
+	width:1000px; margin:auto;
+}
+
+.header{ position:fixed; top:0;width:1000px;
+		z-index:1111; 
+		background-color:white;}
+.title{
+	text-shadow: 10px 10px 15px;
+	font-size: 70pt; text-align: center;
+	margin-bottom: 4px;
+}
+
+.content{
+	margin-top:200px;
+}
+
+nav{ background-color: black;}
+
+nav ul{display:flex; justify-content:flex-end;
+	list-style: none;
+}
+
+nav ul li{padding:10px; margin:0 3px;}
+
+nav ul li a{text-decoration: none; color:white;}
+
+nav ul li:hover{background-color:gray; }
+
+form{margin:0 auto; width:70%;
+	border-radius:1px solid gray; padding:20px;
+}
+	
+	/*배경색을줘서 크기 확인하기.  */
+form label{
+	width:120px;
+	
+	display: inline-block;	/*inline을 블록으로  */
+	padding:7px 0;
+	vertical-align: top; /*위로 올림  */
+}	
+
+input{border-radius: 15px; height:25px;
+	border: 1px solid gray; width:50%;	
+}
+
+textarea{border-radius: 15px; width:70%;
+	height:100px;
+}
+
+button{margin-left:130px; padding:10px 20px;
+	border-radius:5px;
+	background-color: silver;
+}
+
+button:active{
+	border-radius:10px;
+	background-color: orange;
+	box-shadow:2px 2px 2px;
+}

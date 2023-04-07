@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+		<!-- div 같은 영역으로 제어하기  -->
+<style type="text/css">
+	#d01{
+		order:2;
+		background-color:aqua; width:100px;
+	}
+	#d02{
+		order:1;
+		background-color:gray; width:200px;
+	}
+	#divdiv{
+		display:flex;
+		background-color:black;
+	}
+</style>
+</head>
+<body>
+<div id="divdiv">
+	<div id="d01">
+		01
+	</div>
+	
+	<div id="d02">
+		02
+	</div>
+</div>
+
+<!-- 책갈피 기능(누르면 거기로 이동)  -->
+<a href="#name">이름</a>
+<a href="#phone">전화번호</a>
+<a href="#addr">주소</a>
+<h1>1</h1><h1>1</h1><h1>1</h1>
+<a id="name">이름 영역 입니다</a>
+<a href="#top">[top]</a>
+<h1>1</h1><h1>1</h1><h1>1</h1>
+<a id="phone">전화번호 영역 입니다</a>
+<a href="#top">[top]</a>
+<h1>1</h1><h1>1</h1><h1>1</h1>
+<a id="addr">주소 영역 입니다</a>
+<a href="#top">[top]</a>
+<hr>
+
+
+<header style="background-color:aqua">
+	<h1>제목글</h1>
+</header>
+<nav style="background-color:olive">
+	<ul><li>카페</li> <li>뉴스</li> <li>블로그</li></ul>
+</nav>
+<section>
+	<h3>내용이 들어오는 공간</h3>
+	<video controls width="500" src="resources/media/video.mp4">
+	
+	</video>
+	
+	<iframe width="560" height="315" 
+	src="https://www.youtube.com/embed/qxrb5feleiw" 
+	title="YouTube video player" 
+	frameborder="0" allow="accelerometer; 
+	autoplay; clipboard-write; encrypted-media; 
+	gyroscope; picture-in-picture" 
+	allowfullscreen></iframe>
+</section>
+<hr>
+	header,footer
+	시멘틱 웹 : 요런 태그들에 의미를 부여해 놓은것(가독성을 위해)
+	nav : 문서 내에 navigation 요소<br>
+	section : 문서의 영역 구분<br>
+	article : 뉴스나 블로그 내요글 등<br>
+	aside : 주요 컨텐츠 이외의 참고가 될 내용<br>
+	figure : 그림, 비디오 등<br>
+	figcaption : 그림, 비디오 등의 부연설명<br>
+	
+</body>
+</html>

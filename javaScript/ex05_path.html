@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function test(){
+		alert('호출')
+		//location.href='test1.html'
+		fo.submit()
+	}	
+</script>
+</head>
+<body>
+
+<form id="fo" action="test1.html">
+	<input type="text" name="abc"><br>
+	<input onclick="test()" type="button" value="전송">
+</form>
+
+<script type="text/javascript">
+	function mo(){location.href='test1.html'}
+</script>
+
+
+<a href="test1.html">aaa</a>
+<button type="button" onclick="location.href='test1.html'">aaa</button>
+<input type="button" onclick="mo()" value="aaa">
+
+
+</body>
+</html>
+
+
+
+

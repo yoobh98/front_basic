@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	img{
+			width:100px; height:100px;
+		}
+	.wrap{
+		display: flex;
+	}
+	img{width:100px;height:100px;}
+	
+	.list {  position: fixed; right: 30px; top: 10px; width: 100px; }
+	.list_title{ background:red;  } 
+</style>
+
+<script type="text/javascript">
+	
+	var list=[];
+	const imgSize=5;
+	
+	function add(name){
+		if(list.length == 0){
+			list2()
+			/*오른쪽 리스트가 비어있다면 최초한번 실행  */
+		}
+		list.push(name);
+			rightList = document.getElementById("rightList")
+			if(list.length <= imgSize){
+				var img=document.createElement('img'); 
+	        img.src="이미지/"+name+".jpg";
+	        rightList.appendChild(img)
+			}else{
+				rightList.innerHTML = ""
+				list.shift();
+				for(i=0;i<list.length;i++){
+	   			var img=document.createElement('img'); 
+	   			img.src="이미지/"+ list[i] +".jpg";
+	   	        document.getElementById("rightList").appendChild(img)
+				}
+			}
+	}
+	
+	function list2(){
+		ls = document.getElementById("ls")
+		ls.innerHTML="최근 구경한 상품"
+		ls.style.background="green"
+	}
+
+	/* function init(){
+		let tbl = document.getElementById('tbl')
+		let table =document.createElement('table')
+		let list=['아이유0.jpg','아이유1.jpg','아이유2.jpg','아이유3.jpg','아이유4.jpg',
+			'아이유5.jpg','아이유6.jpg','아이유7.jpg','아이유8.jpg','아이유9.jpg']
+		
+		for(i=0;i<list.length;i++){
+			var tr=document.createElement("tr")
+			var td=document.createElement("td")
+			var img=document.createElement("img")
+			img.src="이미지/"+list[i]
+			img.setAttribute("onclick","imgAdd")
+			tr.appendChild(td)
+		}
+	} */
+	
+	
+	
+
+</script>
+</head>
+<body>
+<!--onload="init()  -->
+<div id="tbl">
+    
+</div>
+<div class="wrap">
+		<table border="1">
+			<tr>
+				<th><img src="이미지/아이유0.jpg" onclick="add('아이유0')"></th>
+				<th><img src="이미지/아이유1.jpg" onclick="add('아이유1')"></th>
+				<th><img src="이미지/아이유2.jpg" onclick="add('아이유2')"></th>
+				<th><img src="이미지/아이유3.jpg" onclick="add('아이유3')"></th>
+				<th><img src="이미지/아이유4.jpg" onclick="add('아이유4')"></th>
+			</tr>
+			
+			<tr>
+				<th><img src="이미지/아이유5.jpg" onclick="add('아이유5')"></th>
+				<th><img src="이미지/아이유6.jpg" onclick="add('아이유6')"></th>
+				<th><img src="이미지/아이유7.jpg" onclick="add('아이유7')"></th>
+				<th><img src="이미지/아이유8.jpg" onclick="add('아이유8')"></th>
+				<th><img src="이미지/아이유9.jpg" onclick="add('아이유9')"></th>
+			</tr>
+		</table>
+
+	<div class="list">
+		<h3 class="list_title" id="ls" align="center">목록이<br>없습니다</h3>
+		<div id="rightList"></div>
+		
+	</div>
+</div>
+
+
+</body>
+</html>

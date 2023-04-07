@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	.box01{
+		width:500px;height:300px;
+		position: relative;
+	}
+	.box01::before{
+		content:"";
+		background-image: url(https://pds.joongang.co.kr/news/component/htmlphoto_mmdata/201908/08/ea33eeb9-1b3c-4818-ab19-bc5a68803c4c.jpg);
+		background-size: cover;
+		opacity: 0.5;
+		position: absolute;
+		top:0px;left:0px;right:0px;bottom:0px;
+	}
+	.box01 h1{
+		color:rgb(121, 68, 219);text-align: center;line-height: 300px;
+		position: relative;
+	}
+</style>
+</head>
+<body>
+<div class="box01">
+	<h1>안녕</h1>
+</div>
+
+</body>
+</html>

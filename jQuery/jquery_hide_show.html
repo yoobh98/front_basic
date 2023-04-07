@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+ /* $(document).ready(function(){
+	 $("button").click(function(){
+		 $("p").hide()
+	 })
+	 
+	 $("#show").click(function(){
+		 $("p").show()
+	 })
+ }) */
+ 
+/*  $().ready(function(){
+	 $("button").click(function(){
+		 $("p").hide()
+	 })
+	 
+	 $("#show").click(function(){
+		 $("p").show()
+	 })
+ }) 
+ 
+ // (document).ready 생략 가능
+$(function(){
+	 $("button").click(function(){
+		 $("p").hide()
+	 })
+	 
+	 $("#show").click(function(){
+		 $("p").show()
+	 })
+ })
+
+/*  function hi(){
+	 $("p").hide()
+ }
+ 
+ function sh(){
+     //document.getElementById("p").style.display='block'
+     $("p").show()
+ } */
+
+</script>
+
+</head>
+<body>
+<!-- <p>안녕하세요</p>
+<button>숨기기</button>
+<button id="show">보이기</button>
+<button onclick="hi()">숨기기</button>
+<button id="show" onclick="sh()">보이기</button> -->
+
+<!-- ############# hide_show ##############-->
+<!-- ############# hide_show ##############-->
+<!-- ############# hide_show ##############-->
+<!-- ############# hide_show ##############-->
+<script>
+function cl(){
+	$("p").hide()
+}
+function op(){
+	$("p").show()	
+}
+//이렇게 하면 onclick 필요
+
+$(function(){
+	 $("#cl1").click(function(){
+		 $("p").hide()
+	 })
+	 
+	 $("#op1").click(function(){
+		 $("p").show()
+	 })
+})	
+// 이런식으로 하면 onclick 을 안넣어줘도 됨. 
+</script>
+<hr>
+<p>해위</p>
+<button id="cl1">숨겨</button>
+<button id="op1">나와</button>
+		아이디가 뒤에 선언되어 있으면 안먹힘.
+<!-- ====================== mouse ===================================== -->
+<!-- ====================== mouse =================================================== -->
+<!-- ====================== mouse =================================================== -->
+
+<script>
+var n = 0;
+	$(function(){
+		$("div.out_2").mouseenter(function(){
+			$("p.mo").first().text("포인터 들어옴")
+			$("p.om").last().text(++n)
+		})
+		
+		$(".out_2").mouseleave(function(){
+			$(".mo").first().text("포인터 out")
+			$(".om").last().text("이만큼 레벨업 : "+n)		
+		})
+		
+		$(".out_2").mousedown(function(){
+			$(".mo").first().hide()
+			$(".om").last().text("뿅")
+		})
+		
+		$(".out_2").mouseup(function(){
+			$(".mo").first().show()
+			$(".om").last().text("최종 횟수 :"+n)
+		})
+		
+		
+	})
+</script>
+
+<div class="out_2">
+	<p class="mo">안녕하세요</p>
+	<p class="om">0</p>
+</div>
+
+
+<style type="text/css">
+	div.out_2{
+		width:300px; height:200px;
+		border : 2ps solid black;
+		text-align: center; background-color: powderblue;
+	}
+</style>
+<hr><hr><hr>
+<!-- ######################## addClass  ################################ -->
+<!-- ######################## toggle    ################################## -->
+<!-- ######################## css       ################################### -->
+<style>
+	.addImportant{font-weight: bold; font-size: xx-large;}
+	
+	.blue{color:blue;}
+	.red{color:red;}
+	.orange{color:orange;}
+	.black{color:black;}
+	.yellow{color:yellow;}
+</style>
+<H1>HTML</H1>
+<h2>CSS</h2>
+<h3>JavaScript</h3>
+<div>div</div>
+<p>p</p>
+<span>span</span><br>
+<a>a</a><br>
+<button class="add_btn">css 적용</button>
+<button class="remove_btn">css 해제</button>&nbsp;&nbsp;&nbsp;
+<button class="tog"> 토글 버튼 </button>
+
+<H1 id="a1">HTML</H1>
+<h2 id="a2">CSS</h2>
+<h3 id="a3">JavaScript</h3>
+<div id="a4">div</div>
+<p id="a5">p</p>
+<span id="a6">span</span><br>
+<a id="a7">a</a>
+
+<script type="text/javascript">
+
+$(function(){
+	$(".add_btn").click(function(){
+		$("h1,h2,h3").addClass("blue")
+		$("div,p,span,a").addClass("addImportant")
+	})
+	
+	$(".remove_btn").click(function(){
+		$("h1,h2,h3").removeClass("blue")
+		$("div,p,span,a").removeClass("addImportant")
+	})
+	
+	$(".tog").click(function(){
+		$("#a1,#a2,#a3,#a4,#a5,#a6,#a7").toggleClass("orange")
+	})
+})
+</script>
+<hr><hr><hr>
+<!-- ======================   imgSize    ================================= -->
+<!-- ======================   imgSize    ================================= -->
+<!-- ======================   imgSize    ================================= -->
+<style>
+	.img_test{
+		height:400px;
+		text-align: center;
+	}
+	.img_test img{
+		width:250px;
+	}
+</style>
+
+<div class="img_test">
+<button class="size_btn1">최소</button>
+<button class="size_btn2">중간</button>
+<button class="size_btn3">최대</button>
+<hr>
+<img alt="배치도" src="이미지/image.png">
+</div>
+
+<script>
+	$(function(){
+		$(".size_btn1").click(function(){
+			$("img").animate({width:'150px'})
+		})
+		$(".size_btn2").click(function(){
+			$("img").animate({width:'350px'})
+		})
+		$(".size_btn3").click(function(){
+			$("img").animate({width:'700px'})
+		})
+	})
+</script>
+<hr><hr><hr>
+<!-- ======================   move  	================================= -->
+<!-- ======================   move		================================= -->
+<!-- ======================   move		================================= -->
+<style>
+	.move_div img{width:200px; height:200px;cursor:pointer; position:relative;}
+											/*  마우스포인터    얘가 있어야 작동됨*/
+	.move_div{border:2px solid black; text-align:right; width:800px;margin:auto;}
+</style>
+
+
+<div class="move_div">
+	<img onclick="move_img(this,6000)" src="이미지/아이유4.jpg"><br>
+	<img onclick="move_img(this,4000)" src="이미지/아이유5.jpg"><br>
+	<img onclick="move_img(this,2000)" src="이미지/아이유6.jpg"><br>
+</div>
+<button onclick="back_img('.move_div img')">절로 가봐</button>
+<button onclick="com_back('.move_div img')">다시 돌아와</button>
+
+<script>
+var i=10;
+function move_img(obj,time){
+	while(i<10){
+		$(obj).stop().animate({left:-450,top:0},time)
+		//얘를 멈춰라             left-450이 되면. 시간안에 처리해라.
+		i++
+		$(obj).stop().animate({left:0,top:0},time)
+	}
+}
+//위에꺼 안되긴하는데 아래처럼 사용해서 메뉴바 만드는것도 ㄱㅊ을듯
+function back_img(css,time){
+	$(css).stop().animate({left:500,top:0},1000)
+}
+function com_back(css,time){
+	$(css).stop().animate({left:300,top:0},1000)
+						//요기가 되면 멈춰라~
+}
+</script>
+<hr><hr><hr>
+<!-- ======================   slide  	================================= -->
+<!-- ======================   slide		================================= -->
+<!-- ======================   slide		================================= -->
+
+<style>
+	#panel,#slide,#flip{
+		padding:5px;text-align:center;
+		background-color:powderblue;border:1px solid black;
+	}
+	
+	#panel{padding:70px; display:none;background-color:gray;}
+</style>
+
+<div id="slide">[오늘의 뉴스]</div>
+<div id="panel">백두산 폭발 직전..</div>
+<div id="flip">toggle 슬라이드</div>
+<button id="stop">멈춰!</button>
+
+<script>
+	$(function(){
+		$("#panel").click(function(){
+			$("#panel").slideUp("fase")
+		})
+		
+		$("#slide").mouseenter(function(){
+			$("#panel").slideDown(3000)
+		})
+		
+		$("#flip").click(function(){
+			$("#panel").slideToggle("slow")
+		})//토글 하나로 해결 됩니다.
+		$("#stop").click(function(){
+			$("#panel").stop()
+		})
+		
+	})
+</script>
+<hr><hr><hr>
+
+<!-- ======================   slide  	================================= -->
+<!-- ======================   slide		================================= -->
+<!-- ======================   slide		================================= -->
+
+</body>
+</html>
+
+
+

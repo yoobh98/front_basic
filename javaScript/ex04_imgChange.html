@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	.image{width:100px; height:100px;}
+	.image2{
+		width:200px; height:200px;
+		transition : all 1.5s;
+	}
+	.image3{
+		width:200px; height:200px;
+		transition : all 1.5s;
+	}
+</style>
+<script type="text/javascript">
+	function test(){
+		let img=document.getElementById('img')
+		img.src='듄켈.gif'
+		img.className ='image2'
+	}
+	function test2(){
+		let img=document.getElementById('img')
+		img.src=''
+		img.className='image3'
+	}
+</script>
+</head>
+<body>
+
+<img onclick="test()" class="image" id="img" src="듄켈.png">
+
+
+
+</body>
+</html>

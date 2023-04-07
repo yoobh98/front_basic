@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+<script type="text/javascript">
+
+function changeForm(num){
+	num.replace(/(^02.{0}|^01.{1}|[0-9]{3})([0-9]+)([0-9]{4})/,"$1-$2-$3");
+}
+
+var regPhone="01012341234";
+console.log(regPhone.replace(/(^02.{0}|^01.{1}|[0-9]{3})([0-9]+)([0-9]{4})/,"$1-$2-$3"));
+
+
+/* $(function(){
+	$("#tableTest tr").click(function(){
+		location.href='www.naver.com'
+	})
+}) */
+
+
+</script>
+
+<table border="1" id="tableTest">
+		<tr onclick="location.href='www.naver.com'">
+			<th>주황버섯</th>
+			<th>26세</th>
+			<th>레지스탕스</th>
+		</tr>
+		<tr>
+			<th>sfsdfsdf</th>
+			<th>214234세</th>
+			<th>레지스탕스</th>
+		</tr>
+		<tr>
+			<th>asd</th>
+			<th>sf세</th>
+			<th>234234</th>
+		</tr>
+
+</table>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	img{
+		width:800px;height:700px;
+	}
+	img:hover{
+		transition : all 1.5s;
+		transform: scale(1.1);
+		
+	}
+	button{
+		background-color:white;
+		border: none;
+	}
+	
+	.l_r{
+		width:300px;height:300px;
+	}
+</style>
+
+<script>
+
+	var list=[]
+
+	var num=0
+	for(i=0;i<10;i++){
+		list.push(src='이미지/아이유'+i+'.jpg')
+	}
+	
+	function next(){
+		num++;
+		if(num==11){
+			num=0;
+		}
+		let img=document.getElementById('img')
+		img.src='이미지/아이유'+num+'.jpg'
+	}
+	
+	function before(){
+		if(num>0){
+			num--;
+		}else{
+			num=10;
+		}
+		let img=document.getElementById('img')
+		img.src='이미지/아이유'+num+'.jpg'
+		
+	}
+	
+	var t
+	
+	function start(){
+		next()
+	}
+	
+	function startD(){
+		t=setInterval(start,1000)
+	}
+	
+	function end(){
+		clearInterval(t)
+	}
+	
+	function over(obj){
+		end()
+	
+	}
+	
+	function out(){
+		startD()
+	}
+	
+	function zoom(){
+		let img=document.getElementById('img')
+		img.src='듄켈.gif'
+		img.className ='image2'
+	}
+</script>
+
+</head>
+<body onload="startD()">
+
+
+<div id="wrap">
+	<h1 align="center" style="color:powderblue"> 
+	아이유를 모아모아</h1>
+<table align="center">
+	<tr>
+		<th>
+			<button type="button" onclick="before()">
+				<img class="l_r" src="이미지/왼쪽.png">
+			</button>
+		</th>
+		
+		<th>
+			<img id="img" src="이미지/아이유0.jpg"
+			onmouseover="over(this)" 
+			onmouseout="out()">
+		</th>
+		
+		<th>
+			<button type="button" onclick="next()">
+				<img class="l_r" src="이미지/오른쪽.png">
+			</button>
+		</th>
+	</tr>
+</table>
+</div>
+
+
+</body>
+</html>
+
+
+
+
+
